@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'Cinzel';
+    src: url('../fonts/Cinzel.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d2e2f3;
+}
+
+/*Navigation*/
+.navbar {
+  top: 0;
+  z-index: 1050; /* Higher z-index to ensure navbar is above other content */
+  background: linear-gradient(to right, #f0fff0, #5ac492, #bdf0d1) !important;
+  padding: 15px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a soft shadow for depth */
+  transition: background 0.3s ease-in-out;
+  width: 100%;
+  font-family: 'Poppins', sans-serif; /* Changed font to Poppins */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.navbar .nav-link {
+  color: black !important; /* Default text color */
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Smooth transition */
+}
+
+.navbar .nav-link:hover {
+  color: black !important; /* Keep text black */
+  border-radius: 5px; /* Optional: Makes the hover effect smooth */
+  padding: 5px 10px; /* Optional: Adds padding to hover effect */
+}
+
+
+.scrolled {
+  background: linear-gradient(to right, #84af5f, #00e3ae, #9ab97e) !important;
+}
+
+
+.navbar-brand img {
+  height: 90px;
+  width: auto;
+  padding-left: 100px;
+}
+
+@media (max-width: 991px) {
+
+  .navbar-brand img {
+    height: 70px; /* Reduce size for smaller screens */
+    padding-left: 50px; /* Remove unnecessary padding */
+  }
+}
+
+:root {
+  --main-color: #049068;
+}
+
+.act,
+.navbar ul li a:hover {
+  color: var(--main-color) !important;
+  border-bottom: 1px solid var(--main-color);
+}
+
+/* Dropdown Menu - Hidden by Default */
+.dropdown-menu {
+  opacity: 0;
+  transform: translateY(-15px);
+  visibility: hidden;
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out, visibility 0.4s;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Show Dropdown on Hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* Dropdown Items - Smooth Hover Effect */
+.dropdown-item {
+  position: relative;
+  font-weight: 500;
+  padding: 10px 20px;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+/* Low-Opacity Green Hover Effect */
+.dropdown-item:hover {
+  background: rgba(142, 227, 142, 0.4); /* Low-opacity green */
+  color: #fff; /* White text for contrast */
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.6);
+}
+
+/* Fancy Underline Effect */
+.dropdown-item::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  width: 0%;
+  height: 3px;
+  transition: width 0.3s ease-out, left 0.3s ease-out;
+  border-radius: 5px;
+}
+
+/* Underline Expands on Hover */
+.dropdown-item:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+
+/* Section Styling */
+.container {
+  max-width: 1100px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Table Styling */
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Animated Table */
+.animated-table {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Print & Export Buttons */
+.btn {
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Keyframes Animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+} 
+
+/*Grades Page*/
+
+@media (max-width: 768px) {
+  .container {
+      padding: 1rem !important;
+  }
+  .table-responsive {
+      overflow-x: auto;
+  }
+  .w-50 {
+      width: 100% !important;
+  }
+  .btn {
+      display: block;
+      width: 100%;
+      margin-bottom: 0.5rem;
+  }
+}
+
+.content-wrapper {
+  margin-top: 200px;
+}
+
+
+/* Footer Section */
+footer {
+  width: 100%;
+  margin-top: 100px;
+  background-color: #02baa4;
+  border-radius: 50px 50px 0px 0px;
+  padding-right: 10px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons .icon {
+  color: #fff;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.social-icons .icon:hover {
+  opacity: 0.75;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  footer {
+    border-radius: 30px 30px 0px 0px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+
+  .social-icons {
+    gap: 10px;
+  }
+
+  .social-icons .icon {
+    font-size: 18px;
+  }
+}
+
+
+/*COR Page*/
+.container.content-container {
+  margin-top: 200px; /* Adjust this value based on your navbar height */
+}
+
+    /* Make table responsive */
+    .table-responsive {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+  }
+
+  /* Ensure padding and margins adjust on smaller screens */
+  @media (max-width: 768px) {
+      .content-container {
+          margin-top: 100px; /* Increase spacing for smaller screens */
+          padding: 15px;
+      }
+      .border {
+          padding: 10px;
+      }
+}
+
+/*Profile Page*/
+
+.container-wrapper  {
+  margin-top: 200px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.card {
+  border-radius: 10px;
+}
+.form-control:disabled, .form-select:disabled {
+  background-color: #e9ecef;
+  opacity: 1;
+}
+.btn-container {
+  text-align: center;
+}
+
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  background: #fff;
+}
+.card-header {
+  background: linear-gradient(135deg, #28a745, #218838);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.list-group-item {
+  font-size: 1.1rem;
+  border: none;
+  padding: 12px 20px;
+}
+.list-group-item strong {
+  color: #28a745;
+}
+.status-badge {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: inline-block;
+  transition: 0.3s ease-in-out;
+}
+.status-done {
+  background: #28a745;
+  color: white;
+  box-shadow: 0 0 10px rgba(40, 167, 69, 0.3);
+}
+.status-not-done {
+  background: #dc3545;
+  color: white;
+  box-shadow: 0 0 10px rgba(220, 53, 69, 0.3);
+}
+.status-badge:hover {
+  transform: scale(1.05);
+}
+.icon {
+  font-size: 1.2rem;
+  margin-right: 8px;
+}
+
+
+/*Clearance Page*/
+
+.container {
+  margin-top: 200px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
